@@ -1,10 +1,15 @@
-const app = require('express')();
+const express = require('express');
+const  sequelize = require('./database/connect');
 const PORT = 8080;
 
-app.listen(PORT, ()=>{
-    console.log(`Server up and running on http://localhost:${PORT}`)
-});
+const app = express();
 
-app.get('/', (req,res)=>{
-    res.send("Hello");
-})
+app.use(express.json())
+app.use(express.urlencoded({extended : true}));
+
+app.use('/api', require('./routes/api'));
+
+app.listen(PORT, ()=>{
+    sequelize.authenticate();
+    console.log(`Server and Database up and running on http://localhost:${PORT}`)
+});
