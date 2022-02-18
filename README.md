@@ -4,21 +4,35 @@ User authentication with JWT.
 
 ## Stack 
 
-- Framework - Express
-- Database - PostgreSQL
-- ORM = Sequelize
+- Framework : Express
+- Database : PostgreSQL
+- ORM : Sequelize
 
 ## Project Setup
 1. Node and npm
+    ```bash
+    node -v
+    ```
 2. Dependencies
-3. Database setup 
+    ```bash
+    npm i 
+    ```
+    ```bash
+    yarn install
+    ```
+3. Database setup (Postgres)
+    ```bash
+    create db test;
+    create user test with encrypted password 'test';
+    grant all privileges on test to test;
+    ```
 
 `OR`
 
 ## Routes
 1. User Signup
     
-    `POST 'api/users/signup`
+    `POST 'api/auth/signup`
     
     Response(200)
     ```json
@@ -34,7 +48,7 @@ User authentication with JWT.
 
 2. User Login
 
-    `POST 'api/users/login`
+    `POST 'api/auth/login`
 
     Response(200)
     ```json
@@ -48,7 +62,7 @@ User authentication with JWT.
     }
     ```
 
-3. User Auth
+3. Authenticated User
 
     `POST 'api/user`
 
@@ -76,4 +90,4 @@ DB_PORT = 5432
 
 ```
 
-**Postman Collection** 
+**[Postman Collection](https://www.getpostman.com/collections/95848b5da310765a7f79)** 
