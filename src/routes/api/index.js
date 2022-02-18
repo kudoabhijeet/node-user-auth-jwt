@@ -8,6 +8,6 @@ route.use('/user', userAuth, (req,res) =>{
         res.send(req.user);
     }
 });
-route.use('/users', require('./users'));
+route.use('/auth', require('./users'));
 
 module.exports = route;

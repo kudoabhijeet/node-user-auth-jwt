@@ -14,7 +14,6 @@ db.authenticate()
 .then(()=>{
     app.listen(PORT, ()=>{
     console.log(`Server and Database up and running on http://localhost:${PORT}`)
-    console.log(typeof(SECRET))
     });
 })
 .catch(err =>{
