@@ -15,6 +15,10 @@ const db = new Sequelize({
 });
 
 const Users = db.define('user',{
+    id: {
+        type: Sequelize.STRING,
+        primaryKey: true
+    },
     username : {
         type : Sequelize.STRING,
         primaryKey: true,     
@@ -33,4 +37,4 @@ const Users = db.define('user',{
     }
 }); 
 
-module.exports = { db , Users};
+module.exports = { db , Users };

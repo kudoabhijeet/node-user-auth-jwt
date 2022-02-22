@@ -4,7 +4,7 @@ const { db } = require('./database');
 
 const PORT = process.env.PORT;
 
-db.authenticate()
+db.sync()
 .then(()=>{
     app.listen(PORT, ()=>{
     console.log(`Server and Database up and running on http://localhost:${PORT}`)

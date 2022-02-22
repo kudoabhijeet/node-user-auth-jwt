@@ -1,20 +1,23 @@
 {
-  "name": "starter",
+  "name": "user-auth",
   "version": "1.0.0",
-  "description": "",
+  "description": "User authentication with JWT",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Abhijeet Prasad<abhi.prasad16@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
+    "nanoid": "^3.3.1",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.16.1"
